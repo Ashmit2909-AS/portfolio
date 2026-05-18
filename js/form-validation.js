@@ -249,7 +249,7 @@ function showSuccessMessage() {
     success.style.marginTop = '25px';
 
     success.style.animation =
-        'fadeIn 0.5s ease forwards';
+        'fadeIn 5.5s cubic-bezier(0.34, 1.56, 0.64, 1) forwards';
 
     const formSection =
         document.querySelector('.contact-form');

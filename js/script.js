@@ -194,9 +194,9 @@ const heroTitle = document.querySelector('.hero-content h1');
 
 if (heroTitle) {
 
-    const originalText = heroTitle.innerHTML;
+    const originalText = heroTitle.textContent.trim().replace(/\s+/g, ' ');
 
-    heroTitle.innerHTML = '';
+    heroTitle.textContent = '';
 
     let index = 0;
 
@@ -204,11 +204,11 @@ if (heroTitle) {
 
         if (index < originalText.length) {
 
-            heroTitle.innerHTML += originalText.charAt(index);
+            heroTitle.textContent += originalText.charAt(index);
 
             index++;
 
-            setTimeout(typeEffect, 15);
+            setTimeout(typeEffect, 60);
 
         }
 

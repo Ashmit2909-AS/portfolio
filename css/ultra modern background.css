@@ -1,0 +1,406 @@
+/* =========================
+   ULTRA MODERN HERO BACKGROUND
+========================= */
+
+.hero {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    padding-top: 120px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #020617 0%,
+            #071029 25%,
+            #0f172a 50%,
+            #111827 100%
+        );
+
+}
+
+/* =========================
+   ANIMATED GRID
+========================= */
+
+.hero::before {
+
+    content: '';
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,0.03) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.03) 1px,
+            transparent 1px
+        );
+
+    background-size: 70px 70px;
+
+    mask-image:
+        radial-gradient(
+            circle at center,
+            black 30%,
+            transparent 100%
+        );
+
+    opacity: 0.4;
+
+    animation: gridMove 20s linear infinite;
+
+}
+
+/* =========================
+   BLUE GLOW
+========================= */
+
+.hero::after {
+
+    content: '';
+
+    position: absolute;
+
+    width: 900px;
+    height: 900px;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(65,105,225,0.22),
+            transparent 70%
+        );
+
+    top: -300px;
+    right: -200px;
+
+    filter: blur(80px);
+
+    animation: pulseGlow 8s infinite ease-in-out;
+
+}
+
+/* =========================
+   GOLD LIGHT
+========================= */
+
+.gold-light {
+
+    position: absolute;
+
+    width: 500px;
+    height: 500px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(212,175,55,0.12),
+            transparent 70%
+        );
+
+    bottom: -150px;
+    left: -100px;
+
+    filter: blur(70px);
+
+    animation: floatLight 10s infinite ease-in-out;
+
+}
+
+/* =========================
+   FLOATING GLASS CIRCLES
+========================= */
+
+.glass-circle {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(10px);
+
+    background:
+        rgba(255,255,255,0.03);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.2);
+
+}
+
+.circle-1 {
+
+    width: 220px;
+    height: 220px;
+
+    top: 10%;
+    left: 5%;
+
+    animation: floatCircle 7s infinite ease-in-out;
+
+}
+
+.circle-2 {
+
+    width: 120px;
+    height: 120px;
+
+    bottom: 15%;
+    right: 15%;
+
+    animation: floatCircle 9s infinite ease-in-out;
+
+}
+
+.circle-3 {
+
+    width: 80px;
+    height: 80px;
+
+    top: 55%;
+    right: 8%;
+
+    animation: floatCircle 6s infinite ease-in-out;
+
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 10;
+
+}
+
+.hero-content h1 {
+
+    font-size: 6.5rem;
+
+    line-height: 0.92;
+
+    font-weight: 800;
+
+    letter-spacing: -4px;
+
+    color: #ffffff;
+
+    max-width: 950px;
+
+    margin-bottom: 30px;
+
+    text-shadow:
+        0 10px 30px rgba(0,0,0,0.35);
+
+}
+
+/* =========================
+   GOLD TEXT EFFECT
+========================= */
+
+.hero-content h1 span {
+
+    color: #D4AF37;
+
+    background:
+        linear-gradient(
+            to right,
+            #D4AF37,
+            #f6d365
+        );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.hero-description {
+
+    font-size: 1.2rem;
+
+    color: rgba(255,255,255,0.75);
+
+    max-width: 700px;
+
+    margin-bottom: 45px;
+
+}
+
+/* =========================
+   HERO CARD
+========================= */
+
+.hero-card {
+
+    position: relative;
+
+    z-index: 10;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.08),
+            rgba(255,255,255,0.03)
+        );
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(24px);
+
+    border-radius: 28px;
+
+    padding: 50px;
+
+    box-shadow:
+        0 25px 60px rgba(0,0,0,0.35);
+
+}
+
+/* =========================
+   GRID ANIMATION
+========================= */
+
+@keyframes gridMove {
+
+    from {
+
+        transform: translateY(0px);
+
+    }
+
+    to {
+
+        transform: translateY(70px);
+
+    }
+
+}
+
+/* =========================
+   FLOAT LIGHT
+========================= */
+
+@keyframes floatLight {
+
+    0% {
+
+        transform: translateY(0px);
+
+    }
+
+    50% {
+
+        transform: translateY(-30px);
+
+    }
+
+    100% {
+
+        transform: translateY(0px);
+
+    }
+
+}
+
+/* =========================
+   FLOAT CIRCLES
+========================= */
+
+@keyframes floatCircle {
+
+    0% {
+
+        transform: translateY(0px);
+
+    }
+
+    50% {
+
+        transform: translateY(-20px);
+
+    }
+
+    100% {
+
+        transform: translateY(0px);
+
+    }
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media screen and (max-width: 992px) {
+
+    .hero-content h1 {
+
+        font-size: 5rem;
+
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .hero-content h1 {
+
+        font-size: 4rem;
+
+        line-height: 1;
+
+    }
+
+    .circle-1 {
+
+        width: 150px;
+        height: 150px;
+
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+
+    .hero-content h1 {
+
+        font-size: 3rem;
+
+        letter-spacing: -2px;
+
+    }
+
+    .hero-card {
+
+        padding: 35px;
+
+    }
+
+}

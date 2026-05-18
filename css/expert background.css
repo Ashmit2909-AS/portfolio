@@ -1,0 +1,304 @@
+
+.hero {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(65,105,225,0.18),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at bottom left,
+            rgba(212,175,55,0.08),
+            transparent 25%
+        ),
+
+        linear-gradient(
+            135deg,
+            #020617 0%,
+            #081120 30%,
+            #0f172a 70%,
+            #111827 100%
+        );
+
+}
+
+/* =========================
+   GRID EFFECT
+========================= */
+
+.hero::before {
+
+    content: '';
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+        linear-gradient(
+            rgba(255,255,255,0.03) 1px,
+            transparent 1px
+        ),
+
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.03) 1px,
+            transparent 1px
+        );
+
+    background-size: 80px 80px;
+
+    mask-image:
+        radial-gradient(
+            circle at center,
+            black 20%,
+            transparent 100%
+        );
+
+}
+
+/* =========================
+   BIG BLUR GLOW
+========================= */
+
+.hero::after {
+
+    content: '';
+
+    position: absolute;
+
+    width: 1000px;
+    height: 1000px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(65,105,225,0.25),
+            transparent 70%
+        );
+
+    top: -400px;
+    right: -250px;
+
+    filter: blur(80px);
+
+}
+
+/* =========================
+   HERO CONTENT
+========================= */
+
+.hero-content {
+
+    position: relative;
+
+    z-index: 5;
+
+}
+
+.hero-content h1 {
+
+    font-size: 7rem;
+
+    line-height: 0.88;
+
+    letter-spacing: -5px;
+
+    font-weight: 800;
+
+    color: white;
+
+    max-width: 1000px;
+
+    margin-bottom: 30px;
+
+}
+
+/* =========================
+   GOLD TEXT
+========================= */
+
+.hero-content h1 span {
+
+    background:
+        linear-gradient(
+            to right,
+            #D4AF37,
+            #f5d76e
+        );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.hero-description {
+
+    font-size: 1.15rem;
+
+    color: rgba(255,255,255,0.72);
+
+    max-width: 650px;
+
+    margin-bottom: 45px;
+
+}
+
+/* =========================
+   GLASS CARD
+========================= */
+
+.hero-card {
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,0.08),
+            rgba(255,255,255,0.03)
+        );
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(25px);
+
+    border-radius: 30px;
+
+    padding: 45px;
+
+    box-shadow:
+        0 30px 60px rgba(0,0,0,0.35);
+
+}
+
+/* =========================
+   FLOATING ELEMENTS
+========================= */
+
+.floating-orb {
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(60px);
+
+}
+
+.orb-1 {
+
+    width: 300px;
+    height: 300px;
+
+    background:
+        rgba(65,105,225,0.18);
+
+    top: 10%;
+    left: -100px;
+
+}
+
+.orb-2 {
+
+    width: 250px;
+    height: 250px;
+
+    background:
+        rgba(212,175,55,0.12);
+
+    bottom: 10%;
+    right: 5%;
+
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn-primary {
+
+    background:
+        linear-gradient(
+            135deg,
+            #4169E1,
+            #3154c7
+        );
+
+    border: none;
+
+    color: white;
+
+    box-shadow:
+        0 15px 30px rgba(65,105,225,0.25);
+
+}
+
+.btn-outline {
+
+    border:
+        1px solid rgba(255,255,255,0.12);
+
+    background:
+        rgba(255,255,255,0.04);
+
+    color: white;
+
+    backdrop-filter: blur(12px);
+
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media screen and (max-width: 992px) {
+
+    .hero-content h1 {
+
+        font-size: 5rem;
+
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .hero-content h1 {
+
+        font-size: 4rem;
+
+        line-height: 1;
+
+    }
+
+}
+
+@media screen and (max-width: 576px) {
+
+    .hero-content h1 {
+
+        font-size: 3rem;
+
+        letter-spacing: -2px;
+
+    }
+
+}
