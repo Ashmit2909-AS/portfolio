@@ -1,0 +1,24 @@
+/* Work page custom styles */
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+.project-card {
+    background: var(--surface-color);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: 35px;
+    box-shadow: var(--shadow-sm);
+}
+.project-card h3 {
+    margin-bottom: 16px;
+}
+.project-card p {
+    color: var(--text-light);
+}
+@media screen and (max-width: 992px) {
+    .project-grid {
+        grid-template-columns: 1fr;
+    }
+}

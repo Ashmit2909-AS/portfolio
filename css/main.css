@@ -264,6 +264,18 @@ body.dark-mode .header {
 
     font-size: 24px;
     font-weight: 800;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+}
+
+.logo-image {
+
+    height: 48px;
+    width: 48px;
+    object-fit: contain;
+    border-radius: 8px;
 
 }
 
@@ -505,6 +517,17 @@ body:not(.dark-mode) .hero-card {
 
     position: relative;
     z-index: 2;
+
+}
+
+.hero-logo {
+
+    height: 140px;
+    width: 140px;
+    object-fit: contain;
+    margin-bottom: 25px;
+    display: block;
+    border-radius: 12px;
 
 }
 

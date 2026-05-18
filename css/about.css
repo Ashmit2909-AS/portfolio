@@ -1,0 +1,21 @@
+/* About page custom styles */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 45px;
+}
+.about-text p {
+    margin-bottom: 22px;
+    font-size: 18px;
+    color: var(--text-light);
+}
+.about-stats {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+}
+@media screen and (max-width: 992px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}

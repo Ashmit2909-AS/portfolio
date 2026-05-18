@@ -1,0 +1,24 @@
+/* Contact page custom styles */
+.contact-form {
+    display: grid;
+    gap: 22px;
+    max-width: 650px;
+    margin: auto;
+}
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 18px;
+    border-radius: var(--radius-md);
+    border: 1px solid var(--border-color);
+    background: var(--surface-color);
+}
+.contact-form textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+@media screen and (max-width: 768px) {
+    .contact-form {
+        gap: 18px;
+    }
+}
