@@ -1,22 +1,458 @@
-@media(max-width:768px){
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
 
-    .navbar{
-        flex-direction:column;
-        gap:20px;
-        padding:20px;
+/* =========================
+   LARGE DEVICES
+========================= */
+
+@media screen and (max-width: 1200px) {
+
+    .hero-content h1 {
+
+        font-size: 54px;
+
     }
 
-    .nav-links{
-        flex-direction:column;
-        text-align:center;
+    .hero-grid {
+
+        gap: 40px;
+
     }
 
-    .hero-content h1{
-        font-size:36px;
+}
+
+/* =========================
+   TABLETS
+========================= */
+
+@media screen and (max-width: 992px) {
+
+    .section {
+
+        padding: 90px 0;
+
     }
 
-    .summary,
-    .skills-preview{
-        padding:40px 20px;
+    .section-title h2 {
+
+        font-size: 36px;
+
     }
+
+    .hero {
+
+        padding-top: 140px;
+
+    }
+
+    .hero-grid,
+    .about-grid,
+    .skills-grid,
+    .project-grid,
+    .education-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .hero-content {
+
+        text-align: center;
+
+    }
+
+    .hero-description {
+
+        margin-left: auto;
+        margin-right: auto;
+
+    }
+
+    .hero-buttons {
+
+        justify-content: center;
+
+    }
+
+    .about-stats {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .timeline {
+
+        padding-left: 10px;
+
+    }
+
+}
+
+/* =========================
+   MOBILE NAVIGATION
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    .navbar {
+
+        height: 80px;
+
+    }
+
+    .hamburger {
+
+        display: block;
+
+        z-index: 1001;
+
+    }
+
+    .nav-menu {
+
+        position: fixed;
+
+        top: 0;
+        right: -100%;
+
+        width: 280px;
+        height: 100vh;
+
+        background: var(--background-color);
+
+        flex-direction: column;
+
+        align-items: center;
+        justify-content: center;
+
+        gap: 35px;
+
+        transition: 0.4s ease;
+
+        box-shadow: var(--shadow-lg);
+
+        z-index: 1000;
+
+    }
+
+    .nav-menu.active {
+
+        right: 0;
+
+    }
+
+    .nav-menu a {
+
+        font-size: 18px;
+
+    }
+
+    .hero-content h1 {
+
+        font-size: 42px;
+
+    }
+
+    .hero-description {
+
+        font-size: 17px;
+
+    }
+
+    .hero-card {
+
+        padding: 30px;
+
+    }
+
+    .section-title h2 {
+
+        font-size: 32px;
+
+    }
+
+    .timeline::before {
+
+        left: 10px;
+
+    }
+
+    .timeline-item {
+
+        margin-left: 45px;
+
+        padding: 28px;
+
+    }
+
+    .timeline-item::before {
+
+        left: -43px;
+
+    }
+
+    .project-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .education-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .contact-form {
+
+        gap: 18px;
+
+    }
+
+}
+
+/* =========================
+   SMALL MOBILE DEVICES
+========================= */
+
+@media screen and (max-width: 576px) {
+
+    .container {
+
+        width: 92%;
+
+    }
+
+    .section {
+
+        padding: 75px 0;
+
+    }
+
+    .section-title {
+
+        margin-bottom: 50px;
+
+    }
+
+    .section-title h2 {
+
+        font-size: 28px;
+
+    }
+
+    .hero {
+
+        min-height: auto;
+
+        padding-top: 140px;
+        padding-bottom: 80px;
+
+    }
+
+    .hero-content h1 {
+
+        font-size: 34px;
+
+        line-height: 1.15;
+
+    }
+
+    .hero-description {
+
+        font-size: 16px;
+
+    }
+
+    .hero-buttons {
+
+        flex-direction: column;
+
+        width: 100%;
+
+    }
+
+    .hero-buttons .btn {
+
+        width: 100%;
+
+    }
+
+    .hero-card {
+
+        padding: 25px;
+
+    }
+
+    .hero-info h3 {
+
+        font-size: 24px;
+
+    }
+
+    .about-stats {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .skills-grid {
+
+        gap: 20px;
+
+    }
+
+    .skill-card {
+
+        padding: 30px;
+
+    }
+
+    .timeline-item {
+
+        margin-left: 35px;
+
+        padding: 24px;
+
+    }
+
+    .timeline-item::before {
+
+        width: 18px;
+        height: 18px;
+
+        left: -34px;
+
+    }
+
+    .project-card,
+    .edu-card,
+    .stat-card {
+
+        padding: 30px;
+
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+
+        padding: 16px;
+
+    }
+
+    .footer {
+
+        padding: 40px 0;
+
+    }
+
+}
+
+/* =========================
+   EXTRA SMALL DEVICES
+========================= */
+
+@media screen and (max-width: 400px) {
+
+    .hero-content h1 {
+
+        font-size: 30px;
+
+    }
+
+    .hero-description {
+
+        font-size: 15px;
+
+    }
+
+    .btn {
+
+        padding: 13px 22px;
+
+        font-size: 14px;
+
+    }
+
+    .section-title h2 {
+
+        font-size: 24px;
+
+    }
+
+    .logo {
+
+        font-size: 20px;
+
+    }
+
+}
+
+/* =========================
+   LANDSCAPE PHONES
+========================= */
+
+@media screen and (max-height: 500px) and (orientation: landscape) {
+
+    .hero {
+
+        min-height: auto;
+
+        padding: 160px 0 100px;
+
+    }
+
+    .nav-menu {
+
+        overflow-y: auto;
+
+    }
+
+}
+
+/* =========================
+   DARK MODE MOBILE NAV
+========================= */
+
+body.dark-mode .nav-menu {
+
+    background: #0f172a;
+
+}
+
+/* =========================
+   ACCESSIBILITY
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+
+        animation: none !important;
+        transition: none !important;
+        scroll-behavior: auto !important;
+
+    }
+
+}
+
+/* =========================
+   HIGH RESOLUTION SCREENS
+========================= */
+
+@media screen and (min-width: 1600px) {
+
+    .container {
+
+        max-width: 1400px;
+
+    }
+
+    .hero-content h1 {
+
+        font-size: 72px;
+
+    }
+
 }
