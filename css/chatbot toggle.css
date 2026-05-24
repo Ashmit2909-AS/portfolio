@@ -1,0 +1,347 @@
+/* =========================
+   CHATBOT TOGGLE
+========================= */
+
+.chatbot-toggle {
+
+    position: fixed;
+
+    right: 30px;
+    bottom: 30px;
+
+    width: 75px;
+    height: 75px;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4169E1,
+            #3154c7
+        );
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 9999;
+
+    box-shadow:
+        0 15px 35px rgba(65,105,225,0.35);
+
+    animation: chatbotFloat 4s infinite ease-in-out;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+
+}
+
+.chatbot-toggle:hover {
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 18px 45px rgba(65,105,225,0.45);
+}
+
+.chatbot-toggle img {
+
+    width: 55px;
+    height: 55px;
+
+    object-fit: contain;
+
+}
+
+/* =========================
+   CHATBOT CONTAINER
+========================= */
+
+.chatbot-container {
+
+    position: fixed;
+
+    right: 30px;
+    bottom: 120px;
+
+    width: 380px;
+    height: 600px;
+
+    background:
+        rgba(15,23,42,0.95);
+
+    backdrop-filter: blur(20px);
+
+    border:
+        1px solid rgba(255,255,255,0.08);
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 9999;
+
+    transform: translateY(30px);
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transition: 0.35s ease;
+
+    box-shadow:
+        0 30px 60px rgba(0,0,0,0.45);
+
+}
+
+.chatbot-container.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateY(0);
+
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.chatbot-header {
+
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.08);
+
+}
+
+.chatbot-header-info {
+
+    display: flex;
+    align-items: center;
+    gap: 14px;
+
+}
+
+.chatbot-header-info img {
+
+    width: 50px;
+    height: 50px;
+
+    border-radius: 50%;
+
+}
+
+.chatbot-header-info h3 {
+
+    color: white;
+
+    margin-bottom: 3px;
+
+}
+
+.chatbot-header-info span {
+
+    color: #22c55e;
+
+    font-size: 14px;
+
+}
+
+#closeChatbot {
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+}
+
+/* =========================
+   BODY
+========================= */
+
+.chatbot-body {
+
+    flex: 1;
+
+    padding: 20px;
+
+    overflow-y: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+/* =========================
+   MESSAGES
+========================= */
+
+.bot-message,
+.user-message {
+
+    max-width: 85%;
+
+    padding: 14px 18px;
+
+    border-radius: 18px;
+
+    line-height: 1.5;
+    white-space: pre-wrap;
+
+    font-size: 15px;
+
+}
+
+.bot-message {
+
+    background:
+        rgba(255,255,255,0.08);
+
+    color: white;
+
+    align-self: flex-start;
+
+}
+
+.user-message {
+
+    background:
+        linear-gradient(
+            135deg,
+            #4169E1,
+            #3154c7
+        );
+
+    color: white;
+
+    align-self: flex-end;
+
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.chatbot-footer {
+
+    padding: 18px;
+
+    border-top:
+        1px solid rgba(255,255,255,0.08);
+
+    display: flex;
+    gap: 12px;
+
+}
+
+.chatbot-footer input {
+
+    flex: 1;
+
+    height: 52px;
+
+    border: none;
+
+    outline: none;
+
+    border-radius: 14px;
+
+    padding: 0 16px;
+
+    background:
+        rgba(255,255,255,0.08);
+
+    color: white;
+
+}
+
+.chatbot-footer button {
+
+    width: 52px;
+    height: 52px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4169E1,
+            #3154c7
+        );
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 18px;
+
+}
+
+/* =========================
+   FLOATING EFFECT
+========================= */
+
+@keyframes chatbotFloat {
+
+    0% {
+
+        transform: translateY(0px);
+
+    }
+
+    50% {
+
+        transform: translateY(-10px);
+
+    }
+
+    100% {
+
+        transform: translateY(0px);
+
+    }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media screen and (max-width: 576px) {
+
+    .chatbot-container {
+
+        width: calc(100% - 30px);
+
+        right: 15px;
+        bottom: 100px;
+
+        height: 75vh;
+
+    }
+
+    .chatbot-toggle {
+
+        right: 15px;
+        bottom: 15px;
+
+    }
+
+}

@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ashmit Maharban | Werk</title>
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/chatbot toggle.css">
     <link rel="stylesheet" href="css/work.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/animations.css">
@@ -57,5 +58,33 @@
     </footer>
     <script src="js/script.js"></script>
     <script src="js/theme.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.12.313/pdf.min.js"></script>
+    <script src="js/chatbot elements.js" defer></script>
+
+    <div class="chatbot-toggle" id="chatbotToggle" aria-label="Open AI chatbot">
+        <img src="img/ai-robot-logo.png" alt="AI Assistant">
+    </div>
+    <div class="chatbot-container" id="chatbotContainer" aria-hidden="true">
+        <div class="chatbot-header">
+            <div class="chatbot-header-info">
+                <img src="img/ai-robot-logo.png" alt="AI Assistant">
+                <div>
+                    <h3>AI Assistant</h3>
+                    <span>Online</span>
+                </div>
+            </div>
+            <button id="closeChatbot" aria-label="Close chatbot">✕</button>
+        </div>
+        <div class="chatbot-body" id="chatbotBody">
+            <div class="bot-message">
+                👋 Hoi! Ik ben Ashmit's AI Assistent.
+                Vraag mij iets over zijn ervaring, projecten, SOC Engineering, recruitment of technische achtergrond.
+            </div>
+        </div>
+        <div class="chatbot-footer">
+            <input type="text" id="chatbotInput" placeholder="Stel een vraag..." aria-label="Chatbot input">
+            <button id="sendMessage" aria-label="Send message">➤</button>
+        </div>
+    </div>
 </body>
 </html>
